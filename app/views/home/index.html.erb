@@ -1,4 +1,29 @@
-<h1>Acme Corp</h1>
-<h3>one of the receivers of documents</h3>
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Welcome to Acme Corp</h1>
+      <h2 class="subtitle">Your source for the latest documents</h2>
+    </div>
+  </div>
+</section>
 
-<p>When one of the documents that Acme Corp is subscribed to is updated on the central repository, then it will be automatically updated here too</p>
+<%# <section class="section"> %>
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <p class="subtitle">Acme is an independent company. They consume documents from the central library.</p>
+      </div>
+
+      <div class="column">
+        <p class="subtitle">When one of the documents that Acme Corp is subscribed to is updated on the central repository, then it will be automatically updated here too</p>
+      </div>
+
+      <div class="column">
+        <div class="box">
+          <p class="subtitle">View the documents maintained by Acme Corp:</p>
+          <p><%= link_to "List of documents", documents_path, class: "button is-primary" %> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<%# </section> %>

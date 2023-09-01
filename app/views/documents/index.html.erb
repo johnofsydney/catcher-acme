@@ -1,14 +1,30 @@
-<p style="color: green"><%= notice %></p>
+<p class="has-text-success"><%= notice %></p>
 
-<h1>Documents</h1>
+<h1 class="title">Documents</h1>
 
-<div id="documents">
-  <% @documents.each do |document| %>
-    <%= render document %>
-    <p>
-      <%= link_to "Show this document", document %>
-    </p>
-  <% end %>
+<div class="table-container">
+  <table class="table is-fullwidth is-striped is-hoverable">
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Link</th>
+        <th>Key</th>
+        <th>Token</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @documents.each do |document| %>
+        <tr>
+          <td><%= document.description %></td>
+          <td><%= document.link %></td>
+          <td><%= document.key %></td>
+          <td><%= document.token %></td>
+          <td><%= link_to "Show", document, class: "button is-small is-info" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
 
-<%= link_to "New document", new_document_path %>
+<%= link_to "New document", new_document_path, class: "button is-primary" %>

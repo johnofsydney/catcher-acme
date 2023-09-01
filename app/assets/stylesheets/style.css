@@ -1,0 +1,17 @@
+.column {
+  /* background-color: #345; */
+  /* padding: 3rem;
+  margin: 5rem;
+  color:aqua; */
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+}
+
+* {
+  /* box-sizing: border-box;
+  border: 1px red solid; */
+}
+
+.columns {
+  margin: 30px;
+}

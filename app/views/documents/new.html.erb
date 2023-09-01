@@ -1,9 +1,13 @@
-<h1>New document</h1>
+<section class="section">
+  <div class="container">
+    <h1 class="title">New Document</h1>
 
-<%= render "form", document: @document %>
+    <%= render "form", document: @document %>
 
-<br>
+    <br>
 
-<div>
-  <%= link_to "Back to documents", documents_path %>
-</div>
+    <div class="buttons">
+      <%= link_to "Back to documents", documents_path, class: "button is-primary" %>
+    </div>
+  </div>
+</section>
