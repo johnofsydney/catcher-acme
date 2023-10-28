@@ -34,6 +34,6 @@ class UpdatesController < ApplicationController
   private
     # Only allow a list of trusted parameters through.
     def document_params
-      params.permit(:description, :link, :key, :token)
+      params.except(:update).permit(:description, :link, :key, :token)
     end
 end
