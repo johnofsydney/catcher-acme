@@ -3,8 +3,8 @@ class UpdatesController < ApplicationController
 
   def update
     @document = Document.find_by(token: document_params[:token])
-
     if @document.present?
+
       respond_to do |format|
         if @document.update(link: document_params[:link])
           format.html { redirect_to document_url(@document), notice: "Document was successfully updated." }
