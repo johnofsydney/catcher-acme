@@ -1,4 +1,4 @@
-<section class="hero is-primary">
+<section class="hero is-info is-bold">
   <div class="hero-body">
     <div class="container">
       <h1 class="title">Welcome to Acme Corp</h1>
@@ -7,23 +7,37 @@
   </div>
 </section>
 
-<%# <section class="section"> %>
+<section class="section">
   <div class="container">
-    <div class="columns">
-      <div class="column">
-        <p class="subtitle">Acme is an independent company. They consume documents from the central library.</p>
+    <div class="columns is-multiline">
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-content">
+            <p class="title">Independent Company</p>
+            <p class="subtitle">Acme is an independent company. They consume documents from the central library.</p>
+            <p class="subtitle">When one of the documents that Acme Corp is subscribed to is updated on Pitcher, then it will be automatically updated here too</p>
+          </div>
+        </div>
       </div>
 
-      <div class="column">
-        <p class="subtitle">When one of the documents that Acme Corp is subscribed to is updated on Pitcher, then it will be automatically updated here too</p>
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-content">
+            <p class="title">Integration Support</p>
+            <p class="subtitle">For details of how to integrate a site like Acme with Pitcher, please contact Pitcher for documentation and support</p>
+          </div>
+        </div>
       </div>
 
-      <div class="column">
-        <div class="box">
-          <p class="subtitle">View the documents maintained by Acme Corp:</p>
-          <p><%= link_to "List of documents", documents_path, class: "button is-primary" %> </p>
+      <div class="column is-4">
+        <div class="card">
+          <div class="card-content">
+            <p class="title">Our Documents</p>
+            <p class="subtitle">View the documents maintained by Acme Corp:</p>
+            <p><%= link_to "List of documents", documents_path, class: "button is-primary" %> </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-<%# </section> %>
+</section>

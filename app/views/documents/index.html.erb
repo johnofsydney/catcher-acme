@@ -1,28 +1,43 @@
-<p class="has-text-success"><%= notice %></p>
+<section class="hero is-info is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">Documents</h1>
+      <h2 class="subtitle">All our documents are up to date</h2>
+    </div>
+  </div>
+</section>
 
-<h1 class="title">Documents</h1>
+<section class="section">
+  <div class="container">
+    <div class="notification is-success">
+      <%= notice %>
+    </div>
 
-<div class="table-container">
-  <table class="table is-fullwidth is-striped is-hoverable">
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th>Link</th>
-        <th>Token</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @documents.each do |document| %>
-        <tr>
-          <td><%= document.description %></td>
-          <td><%= document.link %></td>
-          <td><%= document.token %></td>
-          <td><%= link_to "Show", document, class: "button is-small is-info" %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+    <div class="table-container">
+      <table class="table is-fullwidth is-striped is-hoverable">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Link</th>
+            <th>Token</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @documents.each do |document| %>
+            <tr>
+              <td><%= document.description %></td>
+              <td><%= document.link %></td>
+              <td><%= document.token %></td>
+              <td><%= link_to "Show", document, class: "button is-small is-info" %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 
-<%= link_to "New document", new_document_path, class: "button is-primary" %>
+    <div class="buttons">
+      <%= link_to "New document", new_document_path, class: "button is-primary" %>
+    </div>
+  </div>
+</section>

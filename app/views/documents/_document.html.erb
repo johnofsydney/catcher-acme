@@ -17,9 +17,14 @@
     </p>
   </div>
 
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img id="main-document-image" src="<%= document.link %>" alt="Document Image">
-    </figure>
-  </div>
+  <% if document.is_image? %>
+    <div class="card-image">
+    <p class="card-text"><strong> <%= link_to "Download", document.link %></strong></p>
+      <figure class="image is-4by3">
+        <img id="main-document-image" src="<%= document.link %>" alt="Document Image" class="img-fluid mb-3">
+      </figure>
+    </div>
+  <% else %>
+    <%= link_to "Download Document", document.link, class: "btn btn-primary" %>
+  <% end %>
 </div>
