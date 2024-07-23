@@ -2,6 +2,8 @@ class UpdatesController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def update
+    # find or create action, depending on if a document can be found from the token
+
     @document = Document.find_by(token: document_params[:token])
     if @document.present?
 

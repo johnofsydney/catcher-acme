@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Demo app for an application that subscribes to a central library in order to receive updated documents.
 
-Things you may want to cover:
+When a POST request is received to `/updates` a document will be created or updated.
+- created in the database if a document record cannot be found that matches the token provided in the POST payload
+- updated if the token in the payload matches a document in the database
 
-* Ruby version
+This application uses HOTWIRE / broadcast_replace_to to automatically update the document preview (if it is an image) rather than requiring a page refresh to see the new document.
+This feature requires redis to be running.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This application does not save document files at all. It saves a link to the document, and this link can be updated  by the process described above.

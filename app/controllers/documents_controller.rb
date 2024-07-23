@@ -23,10 +23,8 @@ class DocumentsController < ApplicationController
   # POST /documents or /documents.json
   def create
     @document = Document.new(document_params)
-    # there needs to be 2 ways to post into this controller
-    # leave this one as it is for the web app, and create a new one for the api
-    # the api one will need to be able to handle the json data
-    # by finding the document from the token.
+    # as well as this standard CRUD create operation, a document can created (or updated) via a POST to /updates
+    # that is the API entry point for JSON data coming from the central document library, AKA Pitcher
 
     respond_to do |format|
       if @document.save
