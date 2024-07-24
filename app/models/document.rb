@@ -13,6 +13,14 @@ class Document < ApplicationRecord
     )
   end
 
+  after_create_commit do
+    broadcast_append_to(
+      :documents,
+      target: "document-list",
+      html: "<tr id='#{self.id}' is='turbo-frame'><td>#{self.description}</td><td>#{self.link}</td><td>#{self.token}</td><td><a href='/documents/#{self.id}' class='button is-small is-info'>Show</a></td></tr>",
+    )
+  end
+
   def is_image?
     return false unless self.link.present?
 
