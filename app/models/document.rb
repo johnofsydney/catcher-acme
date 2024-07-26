@@ -17,7 +17,14 @@ class Document < ApplicationRecord
     broadcast_append_to(
       :documents,
       target: "document-list",
-      html: "<tr id='#{self.id}' is='turbo-frame'><td>#{self.description}</td><td>#{self.link}</td><td>#{self.token}</td><td><a href='/documents/#{self.id}' class='button is-small is-info'>Show</a></td></tr>",
+      html: "
+        <tr>
+          <td>#{self.description}</td>
+          <td>#{self.link}</td>
+          <td>#{self.token}</td>
+          <td><a href='/documents/#{self.id}' class='button is-small is-info'>Show</a></td>
+        </tr>
+      "
     )
   end
 

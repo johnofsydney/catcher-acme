@@ -25,9 +25,9 @@
             <th></th>
           </tr>
         </thead>
-        <tbody id="document-list" is="turbo-frame">
+        <tbody id="document-list">
           <% @documents.each do |document| %>
-            <%"<tr id=#{document.id} is='turbo-frame'>"%>
+            <tr>
               <td><%= document.description %></td>
               <td><%= document.link %></td>
               <td><%= document.token %></td>
